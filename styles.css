@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -24,7 +26,7 @@ header.hidden {
   transform: translateY(-100%);
 }
 
-header .container {
+.navbar-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0.25rem 2rem;
@@ -387,156 +389,134 @@ header a:hover {
   transform: translateY(0);
 }
 
-.reviews-section {
-  text-align: center;
-  padding: 6rem 1rem;
-  background: linear-gradient(180deg, #f8faff 0%, #eef2f6 100%);
-  position: relative;
-  overflow: hidden;
+#testimonials {
+    min-height: 100vh;
+    background-color: #f9fafb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 60px;
+    padding: 32px 8%;
 }
 
-.reviews-section h2 {
-  font-size: 2.2rem;
-  font-weight: 700;
-  color: #1c1e21;
-  margin-bottom: 3rem;
-  position: relative;
+#testimonials_header {
+    text-align: center;
 }
 
-.reviews-section h2::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 4px;
-  background: linear-gradient(90deg, #007bff, #00b894);
-  margin: 1rem auto 0;
-  border-radius: 4px;
+#testimonials_header h1 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #3758f9;    
 }
 
-.slider-wrapper {
-  position: relative;
-  overflow: hidden;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 60px;
-  opacity: 0;
-  transform: translateY(60px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+#testimonials_header h2 {
+    color: #111928;
+    font-size: 40px;
 }
 
-.slider-wrapper.visible {
-  opacity: 1;
-  transform: translateY(0);
+#testimonials_header p {
+    color: #637381;
+    font-size: 16px;
+    max-width: 485px;
 }
 
-.slider {
-  display: flex;
-  transition: transform 0.6s ease-in-out;
-  will-change: transform;
+.swiper {
+    width: 100%;
+    height: 329px;
+    padding-bottom: 60px;
+} 
+
+.swiper-slide {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    justify-content: center;
+    box-shadow: 0px 0px 20px 0px rgba(92, 115, 160, 0.07);
+    padding: 34px;
+    border-radius: 12px;
 }
 
-/* Cartão de depoimento */
-.review-card {
-  flex: 0 0 calc(33.333% - 1rem);
-  background: #ffffff;
-  border-radius: 18px;
-  padding: 2rem;
-  margin: 0.5rem;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-  text-align: left;
-  min-height: 230px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 1px solid rgba(0, 0, 0, 0.05);
+.testimonial-rate {
+    display: flex;
+    gap: 2px;
 }
 
-.review-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+.testimonial-rate i {
+    color: #f9b707;
 }
 
-/* Título e texto dentro do review */
-.review-card h3 {
-  font-size: 1.1rem;
-  color: #007bff;
-  margin-bottom: 0.75rem;
-  font-weight: 600;
+.testimonial-quote {
+    color: #637381;
+    font-size: 16px;
 }
 
-.review-card p {
-  color: #444;
-  font-size: 1rem;
-  line-height: 1.7;
-  font-style: italic;
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 18px;
 }
 
-/* Botões de navegação */
-.slider-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: linear-gradient(135deg, #007bff, #00b894);
-  border: none;
-  border-radius: 50%;
-  padding: 14px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 10;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+.author-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    overflow: hidden;
 }
 
-.slider-btn:hover {
-  transform: translateY(-50%) scale(1.1);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+.author-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.slider-btn.prev {
-  left: 15px;
+.author-info h3 {
+    font-weight: 600;
+    font-size: 14px;
+    color: #111928;
 }
 
-.slider-btn.next {
-  right: 15px;
+.author-info p {
+    font-size: 12px;
+    color: #8899a8;
 }
 
-/* Dots de navegação */
-.slider-dots {
-  display: flex;
-  justify-content: center;
-  margin-top: 2.5rem;
-  gap: 10px;
+.swiper-button-prev,
+.swiper-button-next {
+    background-color: #fff;
+    width: 25px;
+    height: 25px;
+    color: #3758f9;
+    border: 1px solid #f9fafb;
+    border-radius: 100%;
+    box-shadow: 0px 0px 20px 0px rgba(92, 115, 160, 0.2);
 }
 
-.slider-dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: #cfd6dc;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+.swiper-button-prev::after {
+    content: '\f053';
+    font-family: 'Font Awesome 5 free';
+    font-weight: 900;
+    font-size: 14px;
 }
 
-.slider-dot:hover {
-  background-color: #007bff;
+.swiper-button-next::after {
+    content: '\f054';
+    font-family: 'Font Awesome 5 free';
+    font-weight: 900;
+    font-size: 14px;
 }
 
-.slider-dot.active {
-  background: linear-gradient(90deg, #007bff, #00b894);
-  transform: scale(1.3);
-  animation: pulse 1.6s infinite;
+.swiper-button-prev {
+    left: 3px;
 }
 
-@keyframes pulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.5);
-  }
-  70% {
-    box-shadow: 0 0 0 8px rgba(0, 123, 255, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(0, 123, 255, 0);
-  }
+.swiper-button-next {
+    right: 3px;
+}
+
+.swiper-pagination.active {
+    background-color: #3758f9;
 }
 
 .faq-section {
@@ -760,12 +740,12 @@ header a:hover {
 }
 
 @media (max-width: 992px) {
-  header .container {
+  .navbar-container {
     padding: 1rem;
   }
 
   .logo {
-    height: 80px;
+    height: 180px;
   }
 
   header ul {
@@ -783,13 +763,11 @@ header a:hover {
   .reasons h2,
   .consulting h2,
   .about h2,
-  .reviews-section h2,
   .faq-container h2 {
     font-size: 1.7rem;
   }
 
-  .reason-card,
-  .review-card {
+  .reason-card {
     padding: 1.5rem;
   }
 
@@ -804,8 +782,8 @@ header a:hover {
 }
 
 @media (max-width: 768px) {
-  header .container {
-    flex-direction: column;
+  .navbar-container {
+    flex-direction: row;
     gap: 0.5rem;
   }
 
@@ -851,20 +829,6 @@ header a:hover {
   .consulting,
   .about {
     padding: 4rem 1.5rem;
-  }
-
-  .reviews-section {
-    padding: 3rem 1rem;
-  }
-
-  .review-card {
-    flex: 0 0 100%;
-    max-width: 90%;
-    margin: 0 auto;
-  }
-
-  .slider-btn {
-    display: none;
   }
 
   .faq-section {
@@ -915,6 +879,11 @@ header a:hover {
     font-size: 0.9rem;
   }
 
+  .about-text {
+    display: flex;
+    flex-direction: column;
+  }
+
   .cta-button {
     font-size: 0.9rem;
     padding: 0.7rem 1.2rem;
@@ -937,9 +906,17 @@ header a:hover {
     padding: 2rem 1rem 1rem;
   }
 
+  .footer-container {
+    align-items: center;
+  }
+
   .footer-info p,
   .footer-info a {
     font-size: 0.9rem;
+  }
+
+  .footer-socials {
+    text-align: left;
   }
 
   .footer-bottom {

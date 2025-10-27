@@ -4,14 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NFC Advogados</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="styles.css" />
+    <title>NFC Advogados</title>
 </head>
 
 <body>
     <header id="navbar">
-        <div class="container">
+        <div class="navbar-container">
             <a href="#" id="logo-link">
                 <img src="/assets/logo.png" alt="Logo" class="logo" />
             </a>
@@ -115,70 +117,135 @@
             </a>
         </div>
     </section>
-    <section class="reviews-section" id="reviews">
-        <h2>Avaliações dos Clientes</h2>
+    <main id="testimonials">
+        <div id="testimonials_header">
+            <h1>Avaliações</h1>
+            <h2>
+                O que os clientes dizem
+            </h2>
+            <p>
+                Quer saber o que torna a nossa marca tão especial?
+                Confira o que nossos clientes têm a dizer!
+            </p>
+        </div>
 
-        <div class="slider-wrapper hidden">
-            <button class="slider-btn prev" aria-label="Anterior">
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24"
-                    stroke="white" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
-                </svg>
-            </button>
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <h3>Juliana Ferreira - São Paulo/SP</h3>
+                        </div>
+                    </div>
+                    <div class="testimonial-rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
 
-            <div class="slider">
-                <div class="review-card">
-                    <h3>Juliana Ferreira - São Paulo/SP</h3>
-                    <p>⭐⭐⭐⭐⭐</p>
-                    <p>Atendimento sensacional! Me explicaram tudo com calma, tiraram minhas dúvidas e sempre
-                        responderam rápido. Dá pra ver que realmente se importam com a gente.</p>
+                    <blockquote class="testimonial-quote">
+                        "Atendimento sensacional! Me explicaram tudo com calma, tiraram minhas dúvidas e sempre responderam rápido. Dá pra ver que realmente se importam com a gente."
+                    </blockquote>
                 </div>
+                <div class="swiper-slide">
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <h3>Ricardo Gomes - São Paulo/SP</h3>
+                        </div>
+                    </div>
+                    <div class="testimonial-rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
 
-                <div class="review-card">
-                    <h3>Ricardo Gomes - São Paulo/SP</h3>
-                    <p>⭐⭐⭐⭐⭐</p>
-                    <p>Achei o escritório por indicação e foi a melhor escolha que fiz. Gente boa, transparente e super
-                        eficiente. Resolveram meu caso rapidinho!</p>
+                    <blockquote class="testimonial-quote">
+                        "Achei o escritório por indicação e foi a melhor escolha que fiz. Gente boa, transparente e super eficiente. Resolveram meu caso rapidinho!"
+                    </blockquote>
                 </div>
+                <div class="swiper-slide">
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <h3>Felipe Andrade - Campinas/SP</h3>
+                        </div>
+                    </div>
+                    <div class="testimonial-rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
 
-                <div class="review-card">
-                    <h3>Felipe Andrade - Campinas/SP</h3>
-                    <p>⭐⭐⭐⭐⭐</p>
-                    <p>A NFC me ajudou em um momento complicado, e hoje só tenho gratidão. Atendimento top, sempre com
-                        atenção e cuidado.</p>
+                    <blockquote class="testimonial-quote">
+                        "A NFC me ajudou em um momento complicado, e hoje só tenho gratidão. Atendimento top, sempre com atenção e cuidado."
+                    </blockquote>
                 </div>
+                <div class="swiper-slide">
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <h3>Camila Rodrigues - São Paulo/SP</h3>
+                        </div>
+                    </div>
+                    <div class="testimonial-rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
 
-                <div class="review-card">
-                    <h3>Camila Rodrigues - São Paulo/SP</h3>
-                    <p>⭐⭐⭐⭐⭐</p>
-                    <p>Me senti super acolhida! Eles tratam a gente com muito respeito e empatia. Diferente de qualquer
-                        outro escritório que já fui.</p>
+                    <blockquote class="testimonial-quote">
+                        "Me senti super acolhida! Eles tratam a gente com muito respeito e empatia. Diferente de qualquer outro escritório que já fui."
+                    </blockquote>
                 </div>
+                <div class="swiper-slide">
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <h3>João Victor - São Bernardo do Campo/SP</h3>
+                        </div>
+                    </div>
+                    <div class="testimonial-rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
 
-                <div class="review-card">
-                    <h3>João Victor - São Bernardo do Campo/SP</h3>
-                    <p>⭐⭐⭐⭐⭐</p>
-                    <p>Equipe excelente! Sempre muito atenciosos e profissionais. Fizeram tudo de forma rápida e com
-                        resultado melhor do que eu esperava.</p>
+                    <blockquote class="testimonial-quote">
+                        "Equipe excelente! Sempre muito atenciosos e profissionais. Fizeram tudo de forma rápida e com resultado melhor do que eu esperava."
+                    </blockquote>
                 </div>
+                <div class="swiper-slide">
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <h3>Beatriz Lima - Rio de Janeiro/RJ</h3>
+                        </div>
+                    </div>
+                    <div class="testimonial-rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
 
-                <div class="review-card">
-                    <h3>Beatriz Lima - Rio de Janeiro/RJ</h3>
-                    <p>⭐⭐⭐⭐⭐</p>
-                    <p>Mesmo sendo de outro estado, fui muito bem atendida. Fizeram tudo online e me deixaram segura do
-                        início ao fim.</p>
+                    <blockquote class="testimonial-quote">
+                        "Mesmo sendo de outro estado, fui muito bem atendida. Fizeram tudo online e me deixaram segura do início ao fim."
+                    </blockquote>
                 </div>
             </div>
-
-            <button class="slider-btn next" aria-label="Próximo">
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24"
-                    stroke="white" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
-                </svg>
-            </button>
+            <div class="swiper-pagination"></div>
+        
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
         </div>
-        <div class="slider-dots"></div>
-    </section>
+    </main>
 
     <section class="faq-section" id="faq">
         <div class="faq-container">
@@ -274,7 +341,7 @@
                 </p>
             </div>
 
-            <div class="footer-info">
+            <div class="footer-info footer-socials">
                 <h3>Informações para Contato</h3>
                 <p>
                     <i class="bi bi-instagram"></i>
@@ -304,6 +371,7 @@
             <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp" />
         </a>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 
