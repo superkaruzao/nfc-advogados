@@ -405,9 +405,19 @@ header a:hover {
 }
 
 #testimonials_header h1 {
-    font-size: 18px;
+    font-size: 2.4rem;
     font-weight: 600;
-    color: #3758f9;    
+    color: #1c1e21;
+}
+
+#testimonials_header h1::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #007bff, #00b894);
+  margin: 1rem auto 0;
+  border-radius: 4px;
 }
 
 #testimonials_header h2 {
