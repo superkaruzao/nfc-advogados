@@ -38,7 +38,7 @@ header.hidden {
 }
 
 .logo {
-  height: 100px;
+  height: 180px;
   width: auto;
   cursor: pointer;
   transition: transform 0.2s ease;
@@ -303,7 +303,7 @@ header a:hover {
   color: #444;
   line-height: 1.8;
   max-width: 750px;
-  margin: 0 auto;
+  margin: 1rem auto;
   text-align: justify;
 }
 
