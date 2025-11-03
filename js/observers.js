@@ -15,7 +15,6 @@ export function setupObservers() {
     observer.observe(el);
   };
 
-  // Seções com animações
   createObserver(".hero-content");
   createObserver(".reasons-container");
   createObserver(".consulting-container");

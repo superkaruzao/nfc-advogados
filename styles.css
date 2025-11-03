@@ -11,15 +11,21 @@ body {
 }
 
 header {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   background: #0D1B2A;
-  box-shadow: 0 2px 12px rgba(13,27,42,0.12);
+  box-shadow: 0 2px 12px rgba(13, 27, 42, 0.12);
   transition: transform 0.4s ease, opacity 0.4s ease;
   z-index: 1000;
   opacity: 1;
+}
+
+header.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 header.hidden {
@@ -55,7 +61,9 @@ header ul {
   align-items: center;
 }
 
-header a, header a:link, header a:visited {
+header a,
+header a:link,
+header a:visited {
   text-decoration: none;
   color: #F8F9FA;
   font-weight: 600;
@@ -72,21 +80,33 @@ header a:hover {
 .hero {
   min-height: 100vh;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: end;
   text-align: center;
-  background-color: #F8F9FA;
+  background-color: white;
   padding: 5rem 2rem;
   position: relative;
   overflow: hidden;
+  background-image: url("./assets/Wallpaper.png");
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 1.5s ease-in-out, transform 2s ease;
+  z-index: 0;
+  will-change: transform;
 }
 
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 20% 40%, rgba(13,27,42,0.03), transparent 40%),
-              radial-gradient(circle at 80% 60%, rgba(0,109,119,0.02), transparent 40%);
+  background: radial-gradient(circle at 20% 40%, rgba(13, 27, 42, 0.03), transparent 40%),
+    radial-gradient(circle at 80% 60%, rgba(0, 109, 119, 0.02), transparent 40%);
   z-index: 0;
 }
 
@@ -97,7 +117,14 @@ header a:hover {
   opacity: 0;
   transform: translateY(50px);
   transition: opacity 0.8s ease, transform 0.8s ease;
-  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.hero-content i {
+  font-size: 24px;
 }
 
 .hero-content.visible {
@@ -130,6 +157,7 @@ header a:hover {
   line-height: 1.6;
 }
 
+
 .cta-button {
   display: inline-block;
   background-color: #0D1B2A;
@@ -138,14 +166,14 @@ header a:hover {
   padding: 1rem 2.5rem;
   border-radius: 40px;
   text-decoration: none;
-  border: 1px solid rgba(201,166,70,0.05);
-  box-shadow: 0 6px 18px rgba(13,27,42,0.12);
+  border: 1px solid rgba(201, 166, 70, 0.05);
+  box-shadow: 0 6px 18px rgba(13, 27, 42, 0.12);
   transition: background 0.25s ease, transform 0.18s ease, box-shadow 0.18s ease;
 }
 
 .cta-button:hover {
   background-color: #006D77;
-  box-shadow: 0 8px 22px rgba(0,109,119,0.12);
+  box-shadow: 0 8px 22px rgba(0, 109, 119, 0.12);
   color: #F8F9FA;
   transform: translateY(-4px);
 }
@@ -166,8 +194,8 @@ header a:hover {
   left: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle at 30% 40%, rgba(0,109,119,0.02), transparent 70%),
-              radial-gradient(circle at 80% 70%, rgba(13,27,42,0.02), transparent 70%);
+  background: radial-gradient(circle at 30% 40%, rgba(0, 109, 119, 0.02), transparent 70%),
+    radial-gradient(circle at 80% 70%, rgba(13, 27, 42, 0.02), transparent 70%);
   z-index: 0;
 }
 
@@ -215,18 +243,18 @@ header a:hover {
   background: #ffffff;
   border-radius: 18px;
   padding: 2.5rem 2rem;
-  box-shadow: 0 10px 25px rgba(13,27,42,0.06);
+  box-shadow: 0 10px 25px rgba(13, 27, 42, 0.06);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
   overflow: hidden;
-  border: 1px solid rgba(13,27,42,0.03);
+  border: 1px solid rgba(13, 27, 42, 0.03);
 }
 
 .reason-card::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(13,27,42,0.02), rgba(0,109,119,0.02));
+  background: linear-gradient(135deg, rgba(13, 27, 42, 0.02), rgba(0, 109, 119, 0.02));
   opacity: 0;
   transition: opacity 0.3s ease;
   border-radius: inherit;
@@ -238,7 +266,7 @@ header a:hover {
 
 .reason-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 14px 32px rgba(13,27,42,0.08);
+  box-shadow: 0 14px 32px rgba(13, 27, 42, 0.08);
 }
 
 .reason-card h3 {
@@ -308,7 +336,7 @@ header a:hover {
 }
 
 .about {
-  background: linear-gradient(180deg,#F8F9FA 0%,#ffffff 100%);
+  background: linear-gradient(180deg, #F8F9FA 0%, #ffffff 100%);
   padding: 6rem 2rem;
   display: flex;
   justify-content: center;
@@ -350,7 +378,7 @@ header a:hover {
   display: block;
   width: 60px;
   height: 4px;
-  background: linear-gradient(90deg,#0D1B2A,#006D77);
+  background: linear-gradient(90deg, #0D1B2A, #006D77);
   margin: 1rem auto 0;
   border-radius: 4px;
 }
@@ -381,8 +409,8 @@ header a:hover {
   font-weight: 600;
   border-radius: 40px;
   text-decoration: none;
-  border: 1px solid rgba(201,166,70,0.07);
-  box-shadow: 0 6px 14px rgba(13,27,42,0.08);
+  border: 1px solid rgba(201, 166, 70, 0.07);
+  box-shadow: 0 6px 14px rgba(13, 27, 42, 0.08);
   transition: transform .25s ease, box-shadow .25s ease, background .3s ease;
 }
 
@@ -435,10 +463,10 @@ header a:hover {
   flex-direction: column;
   gap: 18px;
   justify-content: center;
-  box-shadow: 0px 8px 30px rgba(13,27,42,0.06);
+  box-shadow: 0px 8px 30px rgba(13, 27, 42, 0.06);
   padding: 34px;
   border-radius: 12px;
-  border: 1px solid rgba(13,27,42,0.03);
+  border: 1px solid rgba(13, 27, 42, 0.03);
 }
 
 .testimonial-rate {
@@ -495,9 +523,9 @@ header a:hover {
   width: 34px;
   height: 34px;
   color: #0D1B2A;
-  border: 1px solid rgba(13,27,42,0.06);
+  border: 1px solid rgba(13, 27, 42, 0.06);
   border-radius: 100%;
-  box-shadow: 0 6px 20px rgba(13,27,42,0.08);
+  box-shadow: 0 6px 20px rgba(13, 27, 42, 0.08);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -525,7 +553,7 @@ header a:hover {
 
 .faq-section {
   padding: 6rem 2rem;
-  background: linear-gradient(to bottom, rgba(255,255,255,0.9), #F8F9FA);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), #F8F9FA);
   backdrop-filter: blur(4px);
 }
 
@@ -556,11 +584,11 @@ header a:hover {
   border-radius: 12px;
   overflow: hidden;
   background: rgba(255, 255, 255, 0.95);
-  box-shadow: 0 6px 18px rgba(13,27,42,0.04);
+  box-shadow: 0 6px 18px rgba(13, 27, 42, 0.04);
   opacity: 0;
   transform: translateY(40px);
   transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.3s ease;
-  border: 1px solid rgba(13,27,42,0.03);
+  border: 1px solid rgba(13, 27, 42, 0.03);
 }
 
 .faq-item.visible {
@@ -569,7 +597,7 @@ header a:hover {
 }
 
 .faq-item:hover {
-  box-shadow: 0 10px 26px rgba(13,27,42,0.06);
+  box-shadow: 0 10px 26px rgba(13, 27, 42, 0.06);
 }
 
 .faq-question {
@@ -590,7 +618,7 @@ header a:hover {
 }
 
 .faq-question:hover {
-  background: rgba(0,109,119,0.03);
+  background: rgba(0, 109, 119, 0.03);
   color: #006D77;
 }
 
@@ -649,7 +677,7 @@ header a:hover {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at top center, rgba(12,77,60,0.06), transparent 70%);
+  background: radial-gradient(circle at top center, rgba(12, 77, 60, 0.06), transparent 70%);
   pointer-events: none;
 }
 
@@ -699,7 +727,7 @@ header a:hover {
 }
 
 .footer-bottom {
-  border-top: 1px solid rgba(255,255,255,0.06);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
   padding-top: 1.2rem;
   font-size: 0.9rem;
   color: #cfcfcf;
@@ -712,7 +740,7 @@ header a:hover {
 }
 
 .footer-info h3:hover {
-  text-shadow: 0 0 8px rgba(201,166,70,0.16);
+  text-shadow: 0 0 8px rgba(201, 166, 70, 0.16);
   transition: text-shadow 0.25s ease;
 }
 
@@ -727,7 +755,7 @@ header a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 6px 18px rgba(13,27,42,0.12);
+  box-shadow: 0 6px 18px rgba(13, 27, 42, 0.12);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   z-index: 1000;
 }
@@ -740,15 +768,17 @@ header a:hover {
 
 #whatsappFloat:hover {
   transform: scale(1.08);
-  box-shadow: 0 10px 24px rgba(13,27,42,0.18);
+  box-shadow: 0 10px 24px rgba(13, 27, 42, 0.18);
 }
 
-.hidden-section, .hidden {
+.hidden-section,
+.hidden {
   opacity: 0;
   transform: translateY(-10px);
 }
 
-.show-section, .visible {
+.show-section,
+.visible {
   opacity: 1;
   transform: translateY(0);
   transition: opacity 0.6s ease, transform 0.6s ease;
@@ -760,18 +790,19 @@ header a:hover {
   position: relative;
 }
 
-.slider-wrapper, .reviewsWrapper {
+.slider-wrapper,
+.reviewsWrapper {
   display: flex;
   gap: 12px;
 }
 
 .slider-btn {
   background: #ffffff;
-  border: 1px solid rgba(13,27,42,0.06);
+  border: 1px solid rgba(13, 27, 42, 0.06);
   padding: 8px 10px;
   border-radius: 6px;
   cursor: pointer;
-  box-shadow: 0 6px 18px rgba(13,27,42,0.06);
+  box-shadow: 0 6px 18px rgba(13, 27, 42, 0.06);
 }
 
 .slider-dots {
@@ -785,7 +816,7 @@ header a:hover {
   width: 8px;
   height: 8px;
   border-radius: 100%;
-  background: rgba(13,27,42,0.12);
+  background: rgba(13, 27, 42, 0.12);
   cursor: pointer;
 }
 
@@ -794,20 +825,25 @@ header a:hover {
 }
 
 @media (max-width: 992px) {
-  .navbar-container {
-    padding: 1rem;
-  }
-
   .logo {
-    height: 80px;
+    height: 150px;
   }
 
   header ul {
     gap: 1rem;
   }
+  
+  .hero {
+    align-items: flex-start;
+    min-height: 150vh;
+  }
 
   .hero h1 {
     font-size: 1.8rem;
+  }
+
+  .hero-content i {
+    font-size: 18px;
   }
 
   .hero p {
@@ -924,9 +960,19 @@ header a:hover {
 }
 
 @media (max-width: 480px) {
+
+  .hero {
+    background-size: cover;
+  }
+
   header ul {
     flex-direction: row;
     gap: 0.5rem;
+  }
+
+  .hero {
+    background-image: url('./assets/Wallpaper-celular.png');
+    background-position: center;
   }
 
   .hero h1 {
