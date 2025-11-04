@@ -129,6 +129,7 @@ header a:hover {
 .hero-content i {
   font-size: 24px;
   color: #fff;
+  font-family: 'Playfair Display', serif;
 }
 
 .hero-content.visible {
@@ -700,7 +701,7 @@ header a:hover {
 }
 
 .footer-info h3 {
-  color: #C9A646;
+  color: #006D77;
   margin-bottom: 1rem;
   font-size: 1.15rem;
   font-weight: 700;
@@ -740,7 +741,7 @@ header a:hover {
 }
 
 .footer-bottom span {
-  color: #C9A646;
+  color: #006D77;
   font-weight: 700;
 }
 
