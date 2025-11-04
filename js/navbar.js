@@ -7,9 +7,10 @@ export function setupNavbar() {
 
   function updateNavbar() {
     const currentScrollY = window.scrollY;
-    const heroBottom = hero.offsetTop + hero.offsetHeight;
+    const heroTop = hero.offsetTop;
+    const heroBottom = heroTop + hero.offsetHeight;
 
-    if (currentScrollY < heroBottom) {
+    if (currentScrollY >= heroTop && currentScrollY < heroBottom) {
       navbar.classList.add("fixed");
     } else {
       navbar.classList.remove("fixed");
