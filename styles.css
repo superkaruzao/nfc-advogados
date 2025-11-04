@@ -824,6 +824,16 @@ header a:hover {
   background: #0D1B2A;
 }
 
+@media (max-width: 1440px) {
+  .hero {
+    min-height: 85vh;
+  }
+
+  .hero-content {
+    max-width: 600px;
+  }
+}
+
 @media (max-width: 992px) {
   .logo {
     height: 150px;
