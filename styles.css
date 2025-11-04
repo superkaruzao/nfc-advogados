@@ -64,6 +64,7 @@ header a:visited {
   transition: color 0.25s ease, transform 0.12s ease;
   font-family: 'Lato', sans-serif;
   letter-spacing: 0.2px;
+  height: 150px;
 }
 
 header a:hover {
@@ -74,13 +75,12 @@ header a:hover {
 .hero {
   display: flex;
   align-items: center;
-  margin-top: 10rem;
   justify-content: center;
   text-align: center;
   background-color: white;
-  padding: 5rem 2rem;
+  padding: 12rem 2rem 4rem 2rem;
   position: relative;
-  background-image: url('./assets/office.webp');
+  background-image: url('./assets/office.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
