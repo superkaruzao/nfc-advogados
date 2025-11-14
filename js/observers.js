@@ -20,7 +20,6 @@ export function setupObservers() {
   createObserver(".consulting-container");
   createObserver(".about-container");
 
-  // Footer fade
   const footer = document.querySelector(".footer");
   if (footer) {
     const fadeObserver = new IntersectionObserver(

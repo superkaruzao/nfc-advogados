@@ -20,14 +20,12 @@ export function setupHeroMotion() {
     const heroHeight = hero.offsetHeight;
     const triggerPoint = heroHeight * 0.3;
 
-    // Transição de fundo
     if (scrollY > triggerPoint) {
       hero.classList.add("scrolled");
     } else {
       hero.classList.remove("scrolled");
     }
 
-    // Paralaxe do mar
     if (hero.classList.contains("scrolled")) {
       const parallaxOffset = (scrollY - triggerPoint) * 0.15;
       oceanBg.style.transform = `translateY(${parallaxOffset}px) scale(1)`;
